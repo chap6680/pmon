@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import PokemonsList from './Pokemon/PokemonsList';
+//import Pokedex from './Pokemon/Pokedex';
+import { PokemonProvider } from './Pokemon/PokemonContext';
+
+const App = () => (
+  <PokemonProvider>
+  <div className="main">
+    <PokemonsList />
+  
+  </div>
+  <div className='form-wrapper'>
+    <h2>form</h2>
+  </div>
+  </PokemonProvider>  
+);
 
 export default App;
