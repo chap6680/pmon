@@ -14,7 +14,7 @@ export const PokemonProvider = (props) => {
   const providerValue = {
     pokemons,
     setPokemons,
-    capturedPokemons,
+     capturedPokemons,
     setCapturedPokemons
   };
 
